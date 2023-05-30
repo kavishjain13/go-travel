@@ -60,7 +60,7 @@ const Discover = () => {
           <Image
             source={Avatar}
             className="w-full h-full rounded-md object-cover "
-          />
+          /> 
           </TouchableOpacity>
         </View>
       </View>
@@ -75,7 +75,7 @@ const Discover = () => {
             console.log(details?.geometry?.viewport);
           }}
           query={{
-            key: "YOUR API KEY",
+            key: "Your api key",
             language: "en",
           }}
         />

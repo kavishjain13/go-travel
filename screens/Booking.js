@@ -1,11 +1,10 @@
 import { View, Text, ScrollView } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
 import { useLayoutEffect } from "react";
 import { Image } from "react-native";
 import { TouchableOpacity } from "react-native";
-
 import { FontAwesome } from "@expo/vector-icons";
 import RazorpayCheckout from 'react-native-razorpay';
 const Booking = ({ route }) => {
@@ -16,6 +15,8 @@ const Booking = ({ route }) => {
       headerShown: false,
     });
   }, []);
+  const [date, setDate] = useState(new Date())
+  const [showPicker, setShowPicker] = useState(false)
   return (
     <SafeAreaView className="flex-1 relative bg-white">
       <ScrollView className="px-4 py-6 flex-1 relative">
@@ -82,6 +83,7 @@ const Booking = ({ route }) => {
           </View>
           <View className="w-full h-20 flex-row mt-3 mb-4 ">
             <View className="border-black border-[2px] w-60 h-12 mt-3 mx-3  rounded-3xl">
+              
               <TouchableOpacity className="w-50 items-center justify-center ">
                 <Text className="text-[20px] text-gray-400 py-1"> Date</Text>
               </TouchableOpacity>
